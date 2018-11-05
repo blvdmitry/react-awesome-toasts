@@ -8,6 +8,9 @@ const { Consumer, Provider } = React.createContext({});
 
 export class ToastProvider extends React.PureComponent<T.ToastProviderProps, T.ToastProviderState> {
   static queue: T.ToastProviderState['toasts'] = [];
+  static defaultProps = {
+    timeout: 2760,
+  };
 
   ref = React.createRef<ToastContainer>();
 
@@ -51,7 +54,7 @@ export class ToastProvider extends React.PureComponent<T.ToastProviderProps, T.T
   };
 
   render() {
-    const { children, component } = this.props;
+    const { children, component, timeout } = this.props;
     const { toasts } = this.state;
 
     return (
@@ -70,6 +73,7 @@ export class ToastProvider extends React.PureComponent<T.ToastProviderProps, T.T
                     onHide={this.handleHide}
                     onRemove={this.handleToastRemove}
                     component={component}
+                    timeout={timeout}
                   />
                 ))
               }

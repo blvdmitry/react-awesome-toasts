@@ -10,8 +10,6 @@ const nextFrame = (fn: FrameRequestCallback) => {
 };
 
 class ToastContainer extends React.PureComponent<T.ToastContainerProps, T.ToastContainerState> {
-  static timeout = 2760;
-
   static defaultProps = {
     component: Toast,
   };
@@ -23,7 +21,7 @@ class ToastContainer extends React.PureComponent<T.ToastContainerProps, T.ToastC
   };
 
   startTimer = () => {
-    this.timer = setTimeout(this.hide, ToastContainer.timeout);
+    this.timer = setTimeout(this.hide, this.props.timeout);
   };
 
   stopTimer = () => {

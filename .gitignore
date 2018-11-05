@@ -1,7 +1,6 @@
 node_modules
 dist
 
-
 .gitconfig
 .DS_Store
 .cache

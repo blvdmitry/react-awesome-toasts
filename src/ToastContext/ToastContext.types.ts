@@ -10,6 +10,7 @@ export interface ToastConsumerProps {
 }
 
 export interface ToastProviderProps {
+  timeout: number;
   component: React.ComponentClass;
   children: React.ReactNode;
 }
@@ -29,6 +30,7 @@ export interface ToastContainerProps<T = object> {
   onRemove: () => void;
   toastProps: T;
   component: React.ComponentClass;
+  timeout: number;
 }
 
 export interface ToastContainerState {
