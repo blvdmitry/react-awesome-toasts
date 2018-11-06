@@ -1,6 +1,6 @@
 import React from 'react';
-import classnames from 'classnames';
 import Toast from '../Toast';
+import classnames from '../utilities/classnames';
 import * as T from './ToastContext.types';
 import s from './ToastContainer.css';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
-import uuid from 'uuid';
+import id from '../utilities/id';
 import ToastContainer from './ToastContainer';
 import * as T from './ToastContext.types';
 
@@ -32,7 +32,7 @@ export class ToastProvider extends React.PureComponent<T.ToastProviderProps, T.T
   show = (toast: object) => {
     const { toasts } = this.state;
 
-    ToastProvider.queue.push({ props: toast, id: uuid.v4() });
+    ToastProvider.queue.push({ props: toast, id: id() });
     if (!toasts.length) this.addToastFromQueue();
   };
 

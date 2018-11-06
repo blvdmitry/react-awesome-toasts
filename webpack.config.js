@@ -8,23 +8,31 @@ module.exports = [{
     path: path.join(__dirname, 'dist'),
     filename: 'index.js',
     libraryTarget: 'umd',
+    library: 'reactAwesomeToasts',
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.css']
   },
   module: {
     rules: [{
       test: /\.(ts|tsx)$/,
       use: 'ts-loader',
       exclude: /node_modules/
+    }, {
+      test: /\.css$/,
+      use: [{
+        loader: 'style-loader',
+      }, {
+        loader: 'css-loader',
+        options: {
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+      }],
     }],
   },
   externals: {
-    react: {
-      root: 'React',
-      commonjs2: 'react',
-      commonjs: 'react',
-      amd: 'react',
-    }
+    react: 'react',
+    'react-dom': 'react-dom',
   },
 }];

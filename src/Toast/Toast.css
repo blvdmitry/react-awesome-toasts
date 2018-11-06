@@ -7,6 +7,7 @@
     padding: 16px;
     justify-content: space-between;
     font-size: 14px;
+    position: relative;
 }
 
 .action {
@@ -22,4 +23,9 @@
 
 .action:active {
     top: 1px;
+}
+
+.alert {
+    opacity: 0;
+    position: absolute;
 }

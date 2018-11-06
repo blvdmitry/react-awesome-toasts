@@ -6,6 +6,8 @@ TODO:
 - Code review
 - Stories for new cases (timeout)
 - Landing page
+- README
+
 
 - Custom container classnames
 - Toasts without animation

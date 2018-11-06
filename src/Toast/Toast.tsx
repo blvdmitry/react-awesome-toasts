@@ -47,7 +47,7 @@ class Toast extends React.PureComponent<T.Props> {
 
     return (
       <div {...attributes} className={s['root']}>
-        <span role="alert" aria-label={ariaLabel || text} />
+        <span className={s['alert']} role="alert" aria-label={ariaLabel || text} />
         <span className={s['text']}>{ text }</span>
         {
           actionText && (
