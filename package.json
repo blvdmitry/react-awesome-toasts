@@ -4,6 +4,9 @@
   "description": "Higly customisable React toast notifications with automanaged queue",
   "author": "Dmitry Belyaev (https://bananabobby.github.io)",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "start": "start-storybook -p 9001 -c .storybook -s dist/storybook/"
@@ -37,5 +40,5 @@
     "notification",
     "notifications",
     "awesome"
-  ]
+  ],
 }
