@@ -4,6 +4,10 @@
   "description": "Higly customisable React toast notifications with automanaged queue",
   "author": "Dmitry Belyaev (https://bananabobby.github.io)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BananaBobby/react-awesome-toasts.git"
+  },
   "files": [
     "dist"
   ],
