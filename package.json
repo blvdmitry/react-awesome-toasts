@@ -1,4 +1,9 @@
 {
+  "name": "react-awesome-toasts",
+  "version": "0.0.1",
+  "description": "Higly customisable React toast notifications with automanaged queue",
+  "author": "Dmitry Belyaev (https://bananabobby.github.io)",
+  "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "start": "start-storybook -p 9001 -c .storybook -s dist/storybook/"
@@ -24,5 +29,13 @@
   "peerDependencies": {
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
-  }
+  },
+  "keywords": [
+    "react",
+    "toast",
+    "toasts",
+    "notification",
+    "notifications",
+    "awesome"
+  ]
 }
