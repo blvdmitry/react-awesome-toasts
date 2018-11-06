@@ -1,13 +1,9 @@
 import React from 'react';
 import Toast from '../Toast';
 import classnames from '../utilities/classnames';
+import nextFrame from '../utilities/nextFrame';
 import * as T from './ToastContext.types';
 import s from './ToastContainer.css';
-
-const raf = requestAnimationFrame;
-const nextFrame = (fn: FrameRequestCallback) => {
-  raf(() => raf(fn));
-};
 
 class ToastContainer extends React.PureComponent<T.ToastContainerProps, T.ToastContainerState> {
   static defaultProps = {

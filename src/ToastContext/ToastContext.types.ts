@@ -23,7 +23,6 @@ export interface ToastProviderQueueItem {
   id: string;
 }
 
-
 export interface ToastProviderState {
   toasts: Array<ToastProviderQueueItem>;
 }
@@ -43,4 +42,4 @@ export interface ToastContainerState {
 
 type WithToastComponent = React.ComponentClass<{ toast: ToastContext } & object>;
 
-export type WithToast = (c: WithToastComponent) => (props: object) => React.ReactElement<any>;
+export type WithToast = (component: WithToastComponent) => (props: object) => React.ReactElement<any>;

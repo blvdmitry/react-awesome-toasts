@@ -14,7 +14,6 @@ const toastProps = {
   actionText: 'Undo',
 };
 
-
 class TestButton extends React.Component<Props> {
   handleClick = () => {
     this.props.toast.show({ ...toastProps, onActionClick: this.props.toast.hide });
@@ -28,14 +27,17 @@ class TestButton extends React.Component<Props> {
 const ToastButton = withToast(TestButton);
 
 storiesOf('Toast', module)
-  .add('Default', () => (
-    <ToastProvider component={Toast} position="top-right">
+  .add('Using HOC', () => (
+    <ToastProvider component={Toast}>
+      <ToastButton />
+    </ToastProvider>
+  ))
+  .add('Using consumer', () => (
+    <ToastProvider component={Toast}>
       <ToastConsumer>
         {
           ({ show, hide }) => (
-            <button
-              onClick={() => show({ ...toastProps, onActionClick: hide })}
-            >
+            <button onClick={() => show({ ...toastProps, onActionClick: hide })}>
               Show toast
             </button>
           )
@@ -43,8 +45,13 @@ storiesOf('Toast', module)
       </ToastConsumer>
     </ToastProvider>
   ))
-  .add('HOC', () => (
-    <ToastProvider component={Toast}>
+  .add('Custom position', () => (
+    <ToastProvider component={Toast} position="top-right">
+      <ToastButton />
+    </ToastProvider>
+  ))
+  .add('Custom timeout', () => (
+    <ToastProvider component={Toast} timeout={1000}>
       <ToastButton />
     </ToastProvider>
   ));
