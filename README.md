@@ -1,11 +1,11 @@
 # react-awesome-toast
 
 TODO:
-- Custom container classnames
-- Toasts without animation
-- A11y
-- Stories for new cases (timeout)
-- Code review
 - Build webpack config
 - Bundle size
+- Code review
+- Stories for new cases (timeout)
 - Landing page
+
+- Custom container classnames
+- Toasts without animation

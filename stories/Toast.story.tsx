@@ -10,6 +10,7 @@ interface Props {
 
 const toastProps = {
   text: 'Message deleted',
+  ariaLabel: 'Message deleted, click to undo',
   actionText: 'Undo',
 };
 

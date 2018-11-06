@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import Toast from '../Toast';
 import * as T from './ToastContext.types';
@@ -14,14 +14,14 @@ class ToastContainer extends React.PureComponent<T.ToastContainerProps, T.ToastC
     component: Toast,
   };
 
-  timer: NodeJS.Timer;
+  timer: number;
 
   state: T.ToastContainerState = {
     status: 'entering',
   };
 
   startTimer = () => {
-    this.timer = setTimeout(this.hide, this.props.timeout);
+    this.timer = window.setTimeout(this.hide, this.props.timeout);
   };
 
   stopTimer = () => {
