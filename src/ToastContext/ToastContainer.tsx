@@ -2,7 +2,7 @@ import * as React from 'react';
 import classnames from 'classnames';
 import Toast from '../Toast';
 import * as T from './ToastContext.types';
-import './ToastContainer.css';
+import s from './ToastContainer.css';
 
 const raf = requestAnimationFrame;
 const nextFrame = (fn: FrameRequestCallback) => {
@@ -48,14 +48,15 @@ class ToastContainer extends React.PureComponent<T.ToastContainerProps, T.ToastC
   }
 
   render() {
-    const { toastProps, component: Component } = this.props;
+    const { toastProps, component: Component, position } = this.props;
     const { status } = this.state;
     const rootClassName = classnames(
-      'toast-container',
-      status === 'entering' && 'toast-container--entering',
-      status === 'entered' && 'toast-container--entered',
-      status === 'exiting' && 'toast-container--exiting',
-      status === 'exited' && 'toast-container--exited',
+      s['toast-container'],
+      status === 'entering' && s['toast-container--entering'],
+      status === 'entered' && s['toast-container--entered'],
+      status === 'exiting' && s['toast-container--exiting'],
+      status === 'exited' && s['toast-container--exited'],
+      position && s[`toast-container--${position}`],
     );
     const attributes: React.HTMLProps<HTMLDivElement> = {};
 

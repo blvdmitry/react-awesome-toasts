@@ -1,9 +1,24 @@
-module.exports = (baseConfig, env, config) => {
-  config.module.rules.push({
-    test: /\.(ts|tsx)$/,
-    use: 'ts-loader',
-    exclude: /node_modules/
-  });
-  config.resolve.extensions.push('.ts', '.tsx');
-  return config;
+module.exports = {
+  resolve: {
+    extensions: ['.ts', '.tsx', '.css']
+  },
+  module: {
+    rules: [{
+      test: /\.(ts|tsx)$/,
+      use: 'ts-loader',
+      exclude: /node_modules/
+    }, {
+      test: /\.css$/,
+      use: [
+        { loader: 'style-loader' },
+        {
+          loader: 'css-loader',
+          options: {
+            modules: true,
+            localIdentName: '[name]__[local]___[hash:base64:5]',
+          },
+        },
+      ],
+    }],
+  },
 };

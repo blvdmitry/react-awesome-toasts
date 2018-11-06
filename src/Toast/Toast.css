@@ -1,4 +1,4 @@
-.toast {
+.root {
     background: #333;
     border-radius: 2px;
     color: #fff;
@@ -9,7 +9,7 @@
     font-size: 14px;
 }
 
-.toast__action {
+.action {
     margin-left: 16px;
     background: none;
     border: 0;
@@ -20,6 +20,6 @@
     position: relative;
 }
 
-.toast__action:active {
+.action:active {
     top: 1px;
 }

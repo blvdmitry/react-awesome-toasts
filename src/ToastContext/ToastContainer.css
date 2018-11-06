@@ -2,15 +2,46 @@
     transition: 250ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
     transition-property: opacity, transform;
     position: fixed;
-    left: 16px;
-    bottom: 16px;
     will-change: opacity, transform;
     width: 320px;
 }
 
-.toast-container--entering {
+.toast-container--bottom-left {
+    left: 16px;
+    bottom: 0;
+    padding-bottom: 16px;
+}
+
+.toast-container--bottom-right {
+    right: 16px;
+    bottom: 0;
+    padding-bottom: 16px;
+}
+
+.toast-container--top-left {
+    left: 16px;
+    top: 0;
+    padding-top: 16px;
+}
+
+.toast-container--top-right {
+    right: 16px;
+    top: 0;
+    padding-top: 16px;
+}
+
+.toast-container--bottom-left.toast-container--entering,
+.toast-container--bottom-right.toast-container--entering,
+.toast-container--top-left.toast-container--exited,
+.toast-container--top-right.toast-container--exited {
     transform: translateY(100%);
-    opacity: 0;
+}
+
+.toast-container--bottom-left.toast-container--exited,
+.toast-container--bottom-right.toast-container--exited,
+.toast-container--top-left.toast-container--entering,
+.toast-container--top-right.toast-container--entering {
+    transform: translateY(-100%);
 }
 
 .toast-container--exiting,
@@ -19,7 +50,6 @@
 }
 
 .toast-container--exited {
-    transform: translateY(-100%);
     opacity: 0;
 }
 

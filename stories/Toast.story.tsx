@@ -9,7 +9,7 @@ interface Props {
 }
 
 const toastProps = {
-  text: 'Property added to wishlist',
+  text: 'Message deleted',
   actionText: 'Undo',
 };
 
@@ -28,7 +28,7 @@ const ToastButton = withToast(TestButton);
 
 storiesOf('Toast', module)
   .add('Default', () => (
-    <ToastProvider component={Toast}>
+    <ToastProvider component={Toast} position="top-right">
       <ToastConsumer>
         {
           ({ show, hide }) => (

@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+type ToastPosition = 'top-left' | 'bottom-left' | 'top-right' | 'bottom-right';
+
 export interface ToastContext<T = object> {
   show: (props: T) => void;
   hide: () => void;
@@ -12,6 +14,7 @@ export interface ToastConsumerProps {
 export interface ToastProviderProps {
   timeout: number;
   component: React.ComponentClass;
+  position: ToastPosition;
   children: React.ReactNode;
 }
 
@@ -31,6 +34,7 @@ export interface ToastContainerProps<T = object> {
   toastProps: T;
   component: React.ComponentClass;
   timeout: number;
+  position: ToastPosition;
 }
 
 export interface ToastContainerState {

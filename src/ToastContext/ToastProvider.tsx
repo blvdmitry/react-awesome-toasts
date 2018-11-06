@@ -10,6 +10,7 @@ export class ToastProvider extends React.PureComponent<T.ToastProviderProps, T.T
   static queue: T.ToastProviderState['toasts'] = [];
   static defaultProps = {
     timeout: 2760,
+    position: 'bottom-left',
   };
 
   ref = React.createRef<ToastContainer>();
@@ -54,7 +55,7 @@ export class ToastProvider extends React.PureComponent<T.ToastProviderProps, T.T
   };
 
   render() {
-    const { children, component, timeout } = this.props;
+    const { children, component, timeout, position } = this.props;
     const { toasts } = this.state;
 
     return (
@@ -74,6 +75,7 @@ export class ToastProvider extends React.PureComponent<T.ToastProviderProps, T.T
                     onRemove={this.handleToastRemove}
                     component={component}
                     timeout={timeout}
+                    position={position}
                   />
                 ))
               }

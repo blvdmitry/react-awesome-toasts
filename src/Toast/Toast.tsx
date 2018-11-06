@@ -1,6 +1,6 @@
 import React from 'react';
 import * as T from './Toast.types';
-import './Toast.css';
+import s from './Toast.css';
 
 class Toast extends React.PureComponent<T.Props> {
   handleActionClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -13,9 +13,9 @@ class Toast extends React.PureComponent<T.Props> {
     const { text, attributes, actionText } = this.props;
 
     return (
-      <div {...attributes} className="toast">
-        <span className="toast__text">{ text }</span>
-        { actionText && <button onClick={this.handleActionClick} className="toast__action">{ actionText }</button> }
+      <div {...attributes} className={s['root']}>
+        <span className={s['text']}>{ text }</span>
+        { actionText && <button onClick={this.handleActionClick} className={s['action']}>{ actionText }</button> }
       </div>
     );
   }
