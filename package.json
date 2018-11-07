@@ -9,6 +9,7 @@
     "url": "https://github.com/BananaBobby/react-awesome-toasts.git"
   },
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],

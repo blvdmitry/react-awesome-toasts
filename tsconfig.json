@@ -10,7 +10,8 @@
     "allowSyntheticDefaultImports": true,
     "module": "ESNext",
     "moduleResolution": "node",
-    "baseUrl": "./src/"
+    "baseUrl": "./src/",
+    "declaration": true
   },
   "include": [
     "./src/**/*"
