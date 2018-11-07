@@ -7,8 +7,6 @@ module.exports = [{
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'index.js',
-    libraryTarget: 'umd',
-    library: 'reactAwesomeToasts',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css']

@@ -1,11 +1,12 @@
 # react-awesome-toast
 
 TODO:
+- Publish package
 - Landing page
 - README
-- Toast error
-- Typescript typings
-- Publish package
+- Toast error variant
+- Typescript definitions
+
 
 - Custom container classnames
 - Toasts without animation
