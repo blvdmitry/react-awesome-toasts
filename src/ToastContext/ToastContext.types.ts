@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-type ToastPosition = 'top-left' | 'bottom-left' | 'top-right' | 'bottom-right';
+type ToastPosition = 'top-left' | 'bottom-left' | 'top-right' | 'bottom-right' | 'top-center' | 'bottom-center';
 
 export interface ToastContext<T = object> {
   show: (props: T) => void;

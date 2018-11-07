@@ -46,7 +46,7 @@ storiesOf('Toast', module)
     </ToastProvider>
   ))
   .add('Custom position', () => (
-    <ToastProvider component={Toast} position="top-right">
+    <ToastProvider component={Toast} position="top-center">
       <ToastButton />
     </ToastProvider>
   ))

@@ -114,7 +114,7 @@ Default presentational `Toast` component provides accessibility features:
 | --------------- | -------------------------------- |
 | timeout `number` | Default: `4500`. The time until a toast is dismissed, in milliseconds. |
 | component | Presentational component for displaying notifications. |
-| position `top-right, bottom-right, top-left, bottom-left` | Default: `bottom-left`. Position of the toasts on the screen. |
+| position `top-right, bottom-right, top-left, bottom-left, top-center, bottom-center` | Default: `bottom-left`. Position of the toasts on the screen. |
 
 ### Roadmap
 
