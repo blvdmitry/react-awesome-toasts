@@ -16,7 +16,8 @@
   "scripts": {
     "build": "webpack",
     "start": "start-storybook -p 9001 -c .storybook -s dist/storybook/",
-    "build:demo": "webpack --config ./docs/webpack.config.js"
+    "build:demo": "webpack --config ./docs/webpack.config.js",
+    "release": "yarn build && yarn build:demo && yarn publish"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
