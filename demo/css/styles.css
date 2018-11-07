@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-family: "Heebo", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 60px;
+    margin: 0;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    height: 100vh;
+    box-sizing: border-box;
+    min-height: 640px;
+}
+
+.section__header {
+    top: 20px;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.section__header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section__footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.section__footer,
+.section__footer a {
+    color: #b7b7b7;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out;
+}
+
+.section__footer a:hover {
+    color: #333;
+}
+
+.github {
+    opacity: 0.48;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.github:hover {
+    opacity: 1;
+}
+
+.github svg {
+    display: block;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 28px;
+    color: #333;
+    opacity: 0.68;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero__button {
+    margin: 40px 0;
+}
+
+.hero__code {
+    width: 640px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.button {
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    height: 48px;
+    line-height: 40px;
+    padding: 4px 30px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    border-radius: 3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease, background-color 0.25s ease, opacity 0.15s ease;
+    font-size: 14px;
+    cursor: pointer;
+    background: #6772e5;
+    color: #fff;
+    outline: 0;
+    border: 0;
+}
+
+.button:hover {
+    background-color: #6b8ee7;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+.button:focus {
+    outline: none;
+    opacity: 0.9;
+}
+
+.features {
+    margin-top: 40px;
+}
+
+.features:first-child {
+    margin-top: 0;
+}
+
+.feature {
+    width: 30%;
+    margin-left: 5%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.feature:first-child {
+    margin-left: 0;
+}
+
+.feature__title {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 900;
+}
+
+.feature__text {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.feature__icon {
+    font-size: 44px;
+    line-height: 52px;
+}
