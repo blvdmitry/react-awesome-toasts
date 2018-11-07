@@ -118,7 +118,6 @@ Default presentational `Toast` component provides accessibility features:
 
 ### Roadmap
 
-- Centered position
 - Improve accessibility for focused toast actions
 - Move Toast component to a separate bundle
 - Let toasts hide without animation
