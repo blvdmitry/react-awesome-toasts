@@ -3,10 +3,12 @@ const path = require('path');
 module.exports = [{
   mode: 'production',
   entry: './src/index.ts',
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'index.js',
+    library: 'ReactAwesomeToasts',
+    libraryTarget: 'umd',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css']

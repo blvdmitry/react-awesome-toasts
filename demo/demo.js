@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Toast from '../dist'
+import { Toast } from '../dist'
 
 class App extends React.PureComponent {
   render() {
