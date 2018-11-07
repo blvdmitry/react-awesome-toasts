@@ -8,10 +8,9 @@
     "lib": ["es2017", "dom"],
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
-    "baseUrl": "./src/",
-    "declaration": true,
+    "baseUrl": "./src/"
   },
   "include": [
     "./src/**/*"

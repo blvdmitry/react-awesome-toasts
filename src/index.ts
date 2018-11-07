@@ -1,3 +1,7 @@
-export { default as ToastProvider } from './ToastContext/ToastProvider';
-export { default as ToastConsumer } from './ToastContext/ToastConsumer';
-export { default as withToast } from './ToastContext/withToast';
+import ToastProviderImport from './ToastContext/ToastProvider';
+import ToastConsumerImport from './ToastContext/ToastConsumer';
+import withToastImport from './ToastContext/withToast';
+
+export const ToastProvider = ToastProviderImport;
+export const ToastConsumer = ToastConsumerImport;
+export const withToast = withToastImport;
