@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-toasts",
-  "version": "0.0.4-alpha.1",
+  "version": "0.0.4-alpha.2",
   "description": "Higly customisable React toast notifications with automanaged queue",
   "author": "Dmitry Belyaev (https://bananabobby.github.io)",
   "license": "MIT",
