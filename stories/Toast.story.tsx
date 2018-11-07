@@ -54,4 +54,17 @@ storiesOf('Toast', module)
     <ToastProvider component={Toast} timeout={1000}>
       <ToastButton />
     </ToastProvider>
+  ))
+  .add('Error toast', () => (
+    <ToastProvider component={Toast}>
+      <ToastConsumer>
+        {
+          ({ show, hide }) => (
+            <button onClick={() => show({ ...toastProps, onActionClick: hide, variant: 'error' })}>
+              Show toast
+            </button>
+          )
+        }
+      </ToastConsumer>
+    </ToastProvider>
   ));

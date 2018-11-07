@@ -3,7 +3,6 @@
 TODO:
 - Landing page
 - README
-- Toast error variant
 - Typescript definitions
 
 - Move toast to a separate bundle

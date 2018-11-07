@@ -5,4 +5,5 @@ export type Props = {
   actionText?: string;
   ariaLabel?: string;
   onActionClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  variant?: 'error';
 };

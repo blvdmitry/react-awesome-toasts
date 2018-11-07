@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from '../utilities/classnames';
 import * as T from './Toast.types';
 import s from './Toast.css';
 
@@ -43,10 +44,11 @@ class Toast extends React.PureComponent<T.Props> {
   }
 
   render() {
-    const { text, actionText, ariaLabel } = this.props;
+    const { text, actionText, ariaLabel, variant } = this.props;
+    const rootClassNames = classnames(s['root'], variant && s[`root--${variant}`]);
 
     return (
-      <div className={s['root']}>
+      <div className={rootClassNames}>
         <span className={s['alert']} role="alert" aria-label={ariaLabel || text} />
         <span className={s['text']}>{ text }</span>
         {
