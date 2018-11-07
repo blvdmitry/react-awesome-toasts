@@ -121,6 +121,5 @@ Default presentational `Toast` component provides accessibility features:
 ### Roadmap
 
 - Improve accessibility for focused toast actions
-- Move Toast component to a separate bundle
 - Let toasts hide without animation
 - Custom container classnames
