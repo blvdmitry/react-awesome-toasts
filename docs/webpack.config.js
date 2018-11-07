@@ -2,11 +2,11 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './demo/demo.js',
+  entry: path.resolve(__dirname, './demo.js'),
   devtool: 'source-map',
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'demo.js',
+    path: __dirname,
+    filename: 'demo.dist.js',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.css']
