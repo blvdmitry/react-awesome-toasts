@@ -2,11 +2,13 @@
 
 Easily customizable React notification system that manages its queue for you. 
 
-- Screen reader accessibility
-- Responsive
-- Typescript support 
-- React is the only dependency
-- 5kb gzipped 
+https://bananabobby.github.io/react-awesome-toasts/
+
+- 🎙Screen reader accessibility
+- 📱Responsive
+- 📘Typescript support 
+- 📦React is the only dependency
+- 🎉5kb gzipped 
 
 ### Get started
 
