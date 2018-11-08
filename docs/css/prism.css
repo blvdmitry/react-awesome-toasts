@@ -5,7 +5,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-    color: #393A34;
+    color: #f3f3f3;
     font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
     direction: ltr;
     text-align: left;
@@ -37,11 +37,12 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 
 /* Code blocks */
 pre[class*="language-"] {
-    padding: 1em;
-    margin: .5em 0;
+    padding: 20px 20px 30px;
     overflow: auto;
-    border: 1px solid #dddddd;
-    background-color: white;
+    background-color: #32325d;
+    border-radius: 4px;
+    box-shadow: 0 62.5px 125px -25px rgba(50,50,93,.5), 0 37.5px 75px -37.5px rgba(0,0,0,.6);
+    position: relative;
 }
 
 /* Inline code */
@@ -69,7 +70,7 @@ pre[class*="language-"] {
 
 .token.punctuation,
 .token.operator {
-    color: #393A34; /* no highlight */
+    color: #f3f3f3; /* no highlight */
 }
 
 .token.url,
@@ -154,4 +155,152 @@ code[class*="language-css"]{
     background: rgba(193, 222, 241, 0.2);
     background: -webkit-linear-gradient(left, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0));
     background: linear-gradient(to right, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0));
+}
+
+
+
+
+
+pre .highlighted-line {
+    background: rgba(99,115,131,.08)
+}
+
+code .token {
+    padding: 0;
+    margin: 0
+}
+
+code .token:not(.script) {
+    font-weight: 400
+}
+
+code .token.property {
+    font-weight: 500
+}
+
+.language-php .token.operator,code .token.atrule,code .token.keyword {
+    color: #7795f8
+}
+
+code.language-markup .token.namespace,code .token.attr-name,code .token.selector,code .token.tag,code .token.tag * {
+    color: #45b2e8
+}
+
+.language-php .token.operator,code .token.atrule,code .token.keyword,code .token.tag {
+    font-weight: 600
+}
+
+code .token.attr-name {
+    font-style: italic;
+    color: #f3f3f3;
+}
+
+code .token.comment {
+    font-weight: 400;
+    color: #6b7c93
+}
+
+.language-ruby .token.constant+.token.punctuation,.language-ruby .token.constant+.token.punctuation+.token.symbol,code.language-url,code .token.boolean,code .token.builtin,code .token.class-name,code .token.constant,code .token.function,code .token.namespace,code .token.url {
+    font-weight: 600;
+    color: #45b2e8
+}
+
+code .token.number {
+    color: #f79a59
+}
+
+code .token.header {
+    font-weight: 700
+}
+
+.language-bash .token.function,code .token.curl,code .token.option,code .token.variable {
+    color: teal;
+    font-weight: 600
+}
+
+.language-bash .token.function,code .token.curl,code .token.option {
+    font-weight: 500
+}
+
+.language-bash .token.option,code.language-css .property,code .token.parameter,code .token.symbol {
+    font-weight: 500;
+    color: #fa755a
+}
+
+code.language-html .token.attr-value>.punctuation:not(:first-child),code.language-markup .token.attr-value>.punctuation:not(:first-child),code .token.attr-value,code .token.macro,code .token.string,code .token.stripe,code .token.value {
+    font-weight: 400;
+    color: #3ecf8e
+}
+
+code .token.macro .keyword {
+    color: #064508
+}
+
+code .token.publishable-key,code .token.secret-key,code .token.token-tooltip {
+    background: #eceff1;
+    border-radius: 3px;
+    padding: 2px;
+    margin: -2px
+}
+
+code .token.publishable-key.enabled,code .token.secret-key.enabled,code .token.token-tooltip.enabled {
+    background: #dfe3e6
+}
+
+pre {
+    position: relative;
+    color: #e6ebf1
+}
+
+pre .line-numbers {
+    position: absolute;
+    pointer-events: none;
+    top: 11px;
+    left: 29px;
+    width: 16px;
+    counter-reset: linenumber;
+    line-height: 19px;
+    font-family: Source Code Pro,monospace
+}
+
+pre .line-numbers>span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber
+}
+
+pre .line-numbers>span:before {
+    content: counter(linenumber);
+    color: #bec5ca;
+    display: block;
+    font-size: 13px;
+    text-align: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+pre .line-numbers>span.highlighted:before {
+    color: #858c90;
+    font-weight: 500
+}
+
+pre.language-bash .line-numbers>span:before,pre.language-curl .line-numbers>span:before {
+    content: ">"
+}
+
+pre.language-bash .line-numbers>span:first-child:before,pre.language-curl .line-numbers>span:first-child:before {
+    content: "$"
+}
+
+code .token.script *,
+code .token.script {
+    color: #f3f3f3;
+    font-weight: normal;
+}
+
+code .token.tag .function {
+    font-weight: 600;
+    color: #45b2e8;
 }

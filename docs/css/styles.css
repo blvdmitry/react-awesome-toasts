@@ -118,7 +118,19 @@ h1 {
     width: 100%;
     max-width: 640px;
     margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    position: relative;
+}
+
+.hero__code:after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to top right,hsla(0,0%,100%,0) 20%,hsla(0,0%,100%,.5) 70%,#fff);
+    opacity: .2;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    pointer-events: none;
 }
 
 .button {
