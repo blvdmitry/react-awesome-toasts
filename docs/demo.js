@@ -88,7 +88,7 @@ class App extends React.PureComponent {
             </div>
           </div>
         </div>
-        <div className="section">
+        <div className="section section--features">
           <div className="wrapper">
             <div className="features">
               <div className="feature">
