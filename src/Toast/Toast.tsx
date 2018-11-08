@@ -21,7 +21,9 @@ class Toast extends React.PureComponent<T.Props> {
     if (document.activeElement !== this.actionRef.current) return;
 
     if (this.previousFocus && this.previousFocus.focus) {
+      const scrollPosition = window.pageYOffset;
       this.previousFocus.focus();
+      window.scrollTo({ top: scrollPosition });
     }
 
     this.previousFocus = null;
