@@ -15,7 +15,7 @@ class TestButton extends React.Component {
 
     return (
       <button className="button" onClick={() => show(toastProps)}>
-        Show toast
+        Add toast to queue
       </button>
     );
   }
