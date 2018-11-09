@@ -32,7 +32,7 @@ const code = () => `
         onActionClick: toast.hide,
     };
 
-    return <Button ${'onClick={() => toast.show(toastProps)}'}>Show toast</Button>;
+    return <Button ${'onClick={() => toast.show(toastProps)}'}>Add toast to queue</Button>;
   }
 
   export default withToast(ToastButton);
