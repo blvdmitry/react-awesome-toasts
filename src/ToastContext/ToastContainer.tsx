@@ -10,14 +10,14 @@ class ToastContainer extends React.PureComponent<T.ToastContainerProps, T.ToastC
     component: Toast,
   };
 
-  timer: number;
+  timer: NodeJS.Timeout;
 
   state: T.ToastContainerState = {
     status: 'entering',
   };
 
   startTimer = () => {
-    this.timer = window.setTimeout(this.hide, this.props.timeout);
+    this.timer = setTimeout(this.hide, this.props.timeout);
   };
 
   stopTimer = () => {
