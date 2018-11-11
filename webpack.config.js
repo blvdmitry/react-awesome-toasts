@@ -8,6 +8,7 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'index.js',
     libraryTarget: 'umd',
+    globalObject: 'this',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css']
@@ -20,7 +21,9 @@ module.exports = {
     }, {
       test: /\.css$/,
       use: [{
-        loader: 'style-loader',
+        // iso-morphic-style-loader is used here to prevent errors in SSR
+        // since all toasts are shown only on client and you don't need styles to be rendered before
+        loader: 'iso-morphic-style-loader',
       }, {
         loader: 'css-loader',
         options: {

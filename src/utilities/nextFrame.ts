@@ -1,4 +1,3 @@
-const raf = requestAnimationFrame;
 export default (fn: FrameRequestCallback) => {
-  raf(() => raf(fn));
+  window.requestAnimationFrame(() => window.requestAnimationFrame(fn));
 };

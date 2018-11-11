@@ -1,5 +1,4 @@
 import React from 'react';
-import { createPortal } from 'react-dom';
 import id from '../utilities/id';
 import ToastContainer from './ToastContainer';
 import * as T from './ToastContext.types';
@@ -63,25 +62,18 @@ export class ToastProvider extends React.PureComponent<T.ToastProviderProps, T.T
         { children }
 
         {
-          createPortal(
-            <React.Fragment>
-              {
-                toasts.map((toast, index) => (
-                  <ToastContainer
-                    toastProps={toast.props}
-                    ref={index === toasts.length - 1 ? this.ref : undefined}
-                    key={toast.id}
-                    onHide={this.handleHide}
-                    onRemove={this.handleToastRemove}
-                    component={component}
-                    timeout={timeout}
-                    position={position}
-                  />
-                ))
-              }
-            </React.Fragment>,
-            document.body,
-          )
+          toasts.map((toast, index) => (
+            <ToastContainer
+              toastProps={toast.props}
+              ref={index === toasts.length - 1 ? this.ref : undefined}
+              key={toast.id}
+              onHide={this.handleHide}
+              onRemove={this.handleToastRemove}
+              component={component}
+              timeout={timeout}
+              position={position}
+            />
+          ))
         }
       </Provider>
     );
