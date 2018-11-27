@@ -26,13 +26,17 @@ const code = () => `
 
   const ToastButton = ({ toast }) => {
     const toastProps = {
-        text: 'Message sent',
-        actionText: 'Undo',
-        ariaLabel: 'Message sent, click to undo',
-        onActionClick: toast.hide,
+      text: 'Message sent',
+      actionText: 'Undo',
+      ariaLabel: 'Message sent, click to undo',
+      onActionClick: toast.hide,
     };
 
-    return <Button ${'onClick={() => toast.show(toastProps)}'}>Add toast to queue</Button>;
+    return (
+      <Button ${'onClick={() => toast.show(toastProps)}'}>
+        Add toast to queue
+      </Button>
+    );
   }
 
   export default withToast(ToastButton);
