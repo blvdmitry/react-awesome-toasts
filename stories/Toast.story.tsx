@@ -71,7 +71,7 @@ storiesOf('Toast', module)
     </ToastProvider>
   ))
   .add('Custom component', () => (
-    <ToastProvider component={CustomToast}>
+    <ToastProvider component={CustomToast} position="top-center">
       <ToastConsumer>
         {
           ({ show, hide }) => (
