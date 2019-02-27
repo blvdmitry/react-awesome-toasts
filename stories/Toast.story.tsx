@@ -26,6 +26,8 @@ class TestButton extends React.Component<Props> {
 
 const ToastButton = withToast(TestButton);
 
+const CustomToast = (props: any) => <div style={{ background: 'yellow', padding: 16 }}>{ props.text }</div>
+
 storiesOf('Toast', module)
   .add('Using HOC', () => (
     <ToastProvider component={Toast}>
@@ -57,6 +59,19 @@ storiesOf('Toast', module)
   ))
   .add('Error toast', () => (
     <ToastProvider component={Toast}>
+      <ToastConsumer>
+        {
+          ({ show, hide }) => (
+            <button onClick={() => show({ ...toastProps, onActionClick: hide, variant: 'error' })}>
+              Show toast
+            </button>
+          )
+        }
+      </ToastConsumer>
+    </ToastProvider>
+  ))
+  .add('Custom component', () => (
+    <ToastProvider component={CustomToast}>
       <ToastConsumer>
         {
           ({ show, hide }) => (

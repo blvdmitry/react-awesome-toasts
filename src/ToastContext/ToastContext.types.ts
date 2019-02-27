@@ -13,7 +13,7 @@ export interface ToastConsumerProps {
 
 export interface ToastProviderProps {
   timeout: number;
-  component: React.ComponentClass;
+  component: React.ComponentType;
   position: ToastPosition;
   children: React.ReactNode;
 }
@@ -31,7 +31,7 @@ export interface ToastContainerProps<T = object> {
   onHide: () => void;
   onRemove: () => void;
   toastProps: T;
-  component: React.ComponentClass;
+  component: React.ComponentType;
   timeout: number;
   position: ToastPosition;
 }
